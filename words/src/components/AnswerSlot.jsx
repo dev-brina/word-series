@@ -3,16 +3,13 @@ import { useDroppable } from '@dnd-kit/core';
 
 const AnswerSlot = (props) => {
     const {isOver, setNodeRef} = useDroppable({
-        id: 'droppable',
+        id: props.id,
       });
-      const style = {
-        background: isOver ? 'green' : undefined,
-      };
+      let bgclass = isOver ? 'bg-cyan-900' : 'bg-cyan-700'
   return (
-    <div className="answerSlot text-slate-200 w-36 h-20 bg-slate-50" ref={setNodeRef} style={style}>
-    
+    <div className={`answer-slot text-slate-200 h-16 ${bgclass} border-cyan-950 border-4 w-38 rounded-md flex items-center justify-center`} ref={setNodeRef}>
+      {props.children}
     </div>
-    
   )
 }
 

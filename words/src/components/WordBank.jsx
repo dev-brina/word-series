@@ -1,10 +1,10 @@
 import React from 'react'
 import Word from './Word'
 
-const WordBank = () => {
+const WordBank = (props) => {
   return (
-    <div className="word-bank flex flex-wrap gap-8 justify-center items-center">
-        <Word id="drag-0" word="Horse"/>
+    <div className="word-bank flex flex-wrap gap-8 justify-between items-center min-h-16">
+        {props.children}
     </div>
   )
 }
