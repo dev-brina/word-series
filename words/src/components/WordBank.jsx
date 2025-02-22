@@ -3,7 +3,7 @@ import Word from './Word'
 
 const WordBank = (props) => {
   return (
-    <div className="word-bank flex flex-wrap gap-8 justify-between items-center min-h-16">
+    <div className="word-bank flex max-md:flex-col gap-8 justify-between items-center min-h-16">
         {props.children}
     </div>
   )
